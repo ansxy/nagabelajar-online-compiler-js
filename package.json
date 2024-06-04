@@ -2,11 +2,12 @@
   "name": "nagabelajar-online-compiler",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "",
-    "dev": "ts-node-dev app.ts"
+    "start": "node dist/app.js",
+    "dev": "ts-node-dev app.ts",
+    "build": "npx tsc"
   },
   "author": "",
   "license": "ISC",
