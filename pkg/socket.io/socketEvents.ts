@@ -26,8 +26,8 @@ export class SocketEvents {
           RunCode.kill();
         });
       });
-      socket.on("TestCode", (code: string, args: [] ) => {
-        const TestCode = Compiler.TestingCode(code, ...args);
+      socket.on("TestCode", (code: string, args: string[]) => {
+        const TestCode = Compiler.TestingCode(code);
         TestCode.onData((data: string) => {
           socket.emit("output", data);
         });
